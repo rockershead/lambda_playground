@@ -46,6 +46,31 @@ functions:
           rules:
             - suffix: .json
           existing: true
+
+  addUserRedis:
+    role: arn:aws:iam::803409492696:role/lambda_redis_role
+    handler: index.addUserRedis
+
+  getUserRedis:
+    role: arn:aws:iam::803409492696:role/lambda_redis_role
+    handler: index.getUserRedis
+
+  addUserAurora:
+    role: arn:aws:iam::803409492696:role/LambdaAuroraRole
+    handler: index.addUserAurora
+    
+  getUserAurora:
+    role: arn:aws:iam::803409492696:role/LambdaAuroraRole
+    handler: index.getUserAurora
+
+  addUserAuroraServerless:
+    role: arn:aws:iam::803409492696:role/auroraServerlessRole
+    handler: index.addUserAuroraServerless
+
+  getUserAuroraServerless:
+    role: arn:aws:iam::803409492696:role/auroraServerlessRole
+    handler: index.getUserAuroraServerless
+
     
 
 
